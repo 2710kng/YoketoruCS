@@ -8,6 +8,8 @@ namespace YoketoruCS
     {
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(int vKey);
+
+        
         //—ñ‹“Žqenum
         enum State
         {
@@ -41,7 +43,8 @@ namespace YoketoruCS
             UpdateState();
         }
 
-        void ChangeState()
+       
+        labelHighScore.Visible = true; void ChangeState()
         {
             if (nextState == State.None) return;
 
@@ -56,7 +59,6 @@ namespace YoketoruCS
                     labelGameover.visible = false;
                     buttonTitle.visible = false;
                     labelClear.visible = false;
-                    labelHighScore.Visible = true;
                     tempPlayer.Visible = false;
                     tempObstacle.Visible = false;
                     tempItem.Visible = false;
